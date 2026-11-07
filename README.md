@@ -22,19 +22,57 @@ OpenGL 4.2 core context. AVX2 is not required by the application build. Other
 operating systems, older CPUs and fresh machines have not been validated for
 this candidate. The tested kit is MSYS2 UCRT64, GCC 16.2.0 and Qt 6.12.0.
 
+## Vanilla+ tools at a glance
+
+The new workspaces are accessed from the Vanilla+ toolbar in NifSkope. Select a compatible mesh or shader property before opening its editor. All edits remain temporary until **Apply**; saving the NIF to disk is a separate step.
+
+![Vanilla+ toolbar showing the new tool buttons](images/Newtools_Toolbar.png)
+
+### Geometry and tessellation
+
+Generate and condition height information from textures, preview tessellation and displacement, inspect geometry statistics, and stage changes before applying them.
+
+![Vanilla+ Geometry Preview and tessellation workspace](images/TessellationUtility.png)
+
+### Sculpt workspace
+
+Edit mesh geometry with brush controls, protected boundaries, local undo/redo, and checkpoints while retaining the original for comparison.
+
+![Vanilla+ Sculpt workspace](images/SculptUtility.png)
+
+### Material Graph
+
+Inspect and adjust Skyrim lighting shader texture inputs, shader settings, UV transforms, and material animation in a dedicated graph window.
+
+![Vanilla+ Material Graph workspace](images/MaterialGraphUtility.png)
+
+### Animated textures
+
+The Material Graph includes directional U/V panning controls, speed and loop settings, and a sampling preview. Use the graph's animation controls to inspect or stage texture movement.
+
+![Vanilla+ texture animation controls](images/TextureAnimationUtility.png)
+
+### Viewport visibility
+
+Use the eye icons beside applicable blocks in the main NifSkope hierarchy to hide or show geometry in the viewport without editing the NIF's stored visibility.
+
+![Block-list eye toggles](images/RenderViewToggles.png)
+
 ## Documentation
 
-- [Features and workflows](docs/release/FEATURES.md)
-- [Full candidate changelog](docs/release/CHANGELOG-RC1.md)
-- [Known limitations and compatibility](docs/release/KNOWN-LIMITATIONS.md)
-- [Source build and tests](docs/release/BUILDING.md)
-- [Validation and release review](docs/release/VALIDATION.md)
-- [Package contents and manual Git upload](docs/release/PACKAGING.md)
-- [Third-party components](docs/release/THIRD-PARTY.md)
+- [Geometry features and implementation status](docs/vanilla-plus-progress.md)
+- [Sculpt workspace](docs/sculpt-workspace.md)
+- [Material Graph instructions](docs/material-graph-instructions.md)
+- [Viewport visibility](docs/viewport-visibility.md)
+- [Full candidate changelog](CHANGELOG.md)
+- [Displacement limitations](docs/displacement-local-limits.md)
+- [Source build and tests](docs/local-build.md)
+- [Geometry implementation and verification notes](docs/vanilla-plus-progress.md)
+- [Build and deployment scripts](scripts/)
+- [Third-party dependency revisions](docs/local-build.md)
 
 The source package contains a complete vendored source snapshot. It does not
 need submodule downloads for the included dependencies. The top-level source
 README and changelog identify this candidate; their originals remain under
 `docs/upstream/`. Original application licensing and credits are retained.
 
-No upload, Git push, tag, GitHub release or publication has been performed.
